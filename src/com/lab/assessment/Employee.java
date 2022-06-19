@@ -7,25 +7,24 @@ public class Employee {
 	private String pWord;
 	private String department;
 	
-	public String getFirstName() {
-		return firstName;
-	}
-	
-	public void setFirstName(String fName)
+	public Employee(String fName,String lName)
 	{
 		firstName = fName;
-	}
-	
-	public String getLastName() {
-		return lastName;
-	}
-	
-	public void setLastName(String lName)
-	{
 		lastName = lName;
 	}
 	
-	public String getEmail() {
+	public String getFirstName()
+	{
+		return firstName;
+	}
+	
+	public String getLastName()
+	{
+		return lastName;
+	}
+	
+	public String getEmail()
+	{
 		return eMail;
 	}
 	
@@ -34,7 +33,8 @@ public class Employee {
 		eMail = email;
 	}
 	
-	public String getPassword() {
+	public String getPassword()
+	{
 		return pWord;
 	}
 	
@@ -43,7 +43,8 @@ public class Employee {
 		pWord = password;
 	}
 	
-	public String getDepartment() {
+	public String getDepartment()
+	{
 		return department;
 	}
 	
