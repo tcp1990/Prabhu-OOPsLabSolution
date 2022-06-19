@@ -69,7 +69,7 @@ public class CredentialService {
 	}
 
 	public void generateEmail() {
-		String eMail = employee.getFirstName().toLowerCase() + employee.getLastName().toLowerCase() + "@" + employee.getDepartment() + ".abc.com";
+		String eMail = employee.getFirstName().toLowerCase() + employee.getLastName().toLowerCase() + "@" + employee.getDepartment() + ".gl.com";
 		employee.setEmail(eMail);
 	}
 
