@@ -1,4 +1,6 @@
-package com.lab.assessment;
+package App;
+
+import Service.CredentialService;
 
 public class Main {
 

@@ -1,5 +1,6 @@
-package com.lab.assessment;
+package Service;
 
+import Dto.Employee;
 import java.util.Random;
 import java.util.Scanner;
 

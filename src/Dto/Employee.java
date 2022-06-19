@@ -1,4 +1,4 @@
-package com.lab.assessment;
+package Dto;
 
 public class Employee {
 	private String firstName;
