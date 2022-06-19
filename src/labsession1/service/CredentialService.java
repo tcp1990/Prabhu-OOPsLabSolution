@@ -44,7 +44,7 @@ public class CredentialService
 			employee.setDepartment("");
 			break;
 		}
-		in.close();
+		//in.close();
 	}
 
 	public void generatePassword(int len)
