@@ -1,4 +1,4 @@
-package Dto;
+package labsession1.pojo;
 
 public class Employee {
 	private String firstName;
