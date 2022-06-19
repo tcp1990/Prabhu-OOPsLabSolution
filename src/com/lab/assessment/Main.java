@@ -7,8 +7,7 @@ public class Main {
 		CredentialService employee = new CredentialService("Harshit", "Choudary");
 		employee.setDepartment();
 
-		if(employee.getDepartment() == null || employee.getDepartment() == "" )
-		{
+		if (employee.getDepartment() == null || employee.getDepartment() == "") {
 			System.out.println("Please select valid department.");
 			return;
 		}

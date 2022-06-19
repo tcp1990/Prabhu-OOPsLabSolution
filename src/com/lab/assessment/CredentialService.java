@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 public class CredentialService extends Employee {
 
-	public CredentialService(String fName, String lName)
-	{
+	public CredentialService(String fName, String lName) {
 		super(fName, lName);
 	}
 
@@ -21,8 +20,7 @@ public class CredentialService extends Employee {
 		Scanner in = new Scanner(System.in);
 		int depChoice = in.nextInt();
 
-		switch(depChoice)
-		{
+		switch (depChoice) {
 		case 1:
 			setDepartment("tech");
 			break;
@@ -42,8 +40,7 @@ public class CredentialService extends Employee {
 		in.close();
 	}
 
-	public void generatePassword()
-	{
+	public void generatePassword() {
 		int len = 8;
 		String capitalChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		String smallChars = capitalChars.toLowerCase();
@@ -55,24 +52,21 @@ public class CredentialService extends Employee {
 
 		char[] password = new char[len];
 
-		for (int i = 0; i < len; i++)
-		{
+		for (int i = 0; i < len; i++) {
 			password[i] = values.charAt(rndm_method.nextInt(values.length()));
 		}
 		var strPwd = new String(password);
 		setPassword(strPwd);
 	}
 
-	public void generateEmail()
-	{
+	public void generateEmail() {
 		String eMail = getFirstName().toLowerCase() + getLastName().toLowerCase() + "@" + getDepartment() + ".company.com";
 		setEmail(eMail);
 	}
 
-	public void showCredentials()
-	{
-		System.out.println("Dear "+ getFirstName() +" your generated credentials are as follows\r\n"
-				+ "Email ---> "+ getEmail() +"\r\n"
-				+ "Password ---> "+ getPassword() + "\r\n");
+	public void showCredentials() {
+		System.out.println("Dear " + getFirstName() + " your generated credentials are as follows\r\n"
+				+ "Email ---> " + getEmail() + "\r\n" 
+				+ "Password ---> " + getPassword() + "\r\n");
 	}
 }
