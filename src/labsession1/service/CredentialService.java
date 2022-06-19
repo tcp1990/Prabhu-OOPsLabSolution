@@ -5,17 +5,18 @@ import java.util.Scanner;
 
 import labsession1.pojo.Employee;
 
-public class CredentialService {
+public class CredentialService
+{
 
 	private Employee employee;
 	
-	public CredentialService(Employee emp) {
-		
+	public CredentialService(Employee emp)
+	{		
 		employee = emp;
 	}
 
-	public void setDepartment() {
-
+	public void setDepartment()
+	{
 		System.out.print("Please enter the department from the following\n"
 				+ "1. Technical\n"
 				+ "2. Admin\n"
@@ -25,7 +26,8 @@ public class CredentialService {
 		Scanner in = new Scanner(System.in);
 		int depChoice = in.nextInt();
 
-		switch (depChoice) {
+		switch (depChoice)
+		{
 		case 1:
 			employee.setDepartment("tech");
 			break;
@@ -45,7 +47,8 @@ public class CredentialService {
 		in.close();
 	}
 
-	public void generatePassword(int len) {
+	public void generatePassword(int len)
+	{
 		String capitalChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		String smallChars = capitalChars.toLowerCase();
 		String numbers = "0123456789";
@@ -61,19 +64,22 @@ public class CredentialService {
 		password[2] = symbols.charAt(rndmMethod.nextInt(symbols.length()));
 		password[3] = numbers.charAt(rndmMethod.nextInt(numbers.length()));
 
-		for (int i = 4; i < len ; i++) {
+		for (int i = 4; i < len ; i++)
+		{
 			password[i] = values.charAt(rndmMethod.nextInt(values.length()));
 		}
 		var strPwd = new String(password);
 		employee.setPassword(strPwd);
 	}
 
-	public void generateEmail() {
+	public void generateEmail()
+	{
 		String eMail = employee.getFirstName().toLowerCase() + employee.getLastName().toLowerCase() + "@" + employee.getDepartment() + ".gl.com";
 		employee.setEmail(eMail);
 	}
 
-	public void showCredentials() {
+	public void showCredentials()
+	{
 		System.out.println("Dear " + employee.getFirstName() + " your generated credentials are as follows\r\n"
 				+ "Email ---> " + employee.getEmail() + "\r\n" 
 				+ "Password ---> " + employee.getPassword() + "\r\n");

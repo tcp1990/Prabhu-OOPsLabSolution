@@ -1,46 +1,56 @@
 package labsession1.pojo;
 
-public class Employee {
+public class Employee
+{
 	private String firstName;
 	private String lastName;
 	private String eMail;
 	private String pWord;
 	private String department;
 
-	public Employee(String fName, String lName) {
+	public Employee(String fName, String lName)
+	{
 		firstName = fName;
 		lastName = lName;
 	}
 
-	public String getFirstName() {
+	public String getFirstName()
+	{
 		return firstName;
 	}
 
-	public String getLastName() {
+	public String getLastName()
+	{
 		return lastName;
 	}
 
-	public String getEmail() {
+	public String getEmail()
+	{
 		return eMail;
 	}
 
-	public void setEmail(String email) {
+	public void setEmail(String email)
+	{
 		eMail = email;
 	}
 
-	public String getPassword() {
+	public String getPassword()
+	{
 		return pWord;
 	}
 
-	public void setPassword(String password) {
+	public void setPassword(String password)
+	{
 		pWord = password;
 	}
 
-	public String getDepartment() {
+	public String getDepartment()
+	{
 		return department;
 	}
 
-	public void setDepartment(String depMent) {
+	public void setDepartment(String depMent)
+	{
 		department = depMent;
 	}
 }
